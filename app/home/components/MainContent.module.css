@@ -1,0 +1,242 @@
+/* ─── Área de Conteúdo Principal ────────────────────────────────────────── */
+.container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px 32px;
+
+  /* Gradiente rosa SENAI — fiel ao design */
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 20%,
+    rgba(200, 16, 46, 0.10) 0%,
+    rgba(200, 16, 46, 0.04) 50%,
+    transparent 100%
+  ), #f8f8f8;
+}
+
+/* Badge IA */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 100px;
+  padding: 5px 14px 5px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #c8102e;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.badge .material-symbols-outlined {
+  font-size: 16px;
+}
+
+/* Greeting */
+.greeting {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  color: #111;
+  margin: 0 0 12px;
+  text-align: center;
+}
+
+.accentName {
+  color: #c8102e;
+}
+
+.subtext {
+  max-width: 540px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #555;
+  margin: 0 0 36px;
+}
+
+.subtext strong {
+  color: #222;
+  font-weight: 600;
+}
+
+/* Cards de ação */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 280px);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 16px;
+  padding: 24px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.15s, border-color 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10);
+  transform: translateY(-3px);
+  border-color: #d0d0d0;
+}
+
+.cardIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.cardIcon .material-symbols-outlined {
+  font-size: 24px;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+}
+
+.cardDesc {
+  font-size: 13px;
+  line-height: 1.55;
+  color: #777;
+  margin: 0;
+}
+
+/* Sugestões */
+.suggestionsArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.suggestionsLabel {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #aaa;
+  text-transform: uppercase;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.chip {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 100px;
+  padding: 7px 14px;
+  font-size: 13px;
+  color: #444;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.chip:hover {
+  background: #fff0f0;
+  border-color: #c8102e;
+  color: #c8102e;
+}
+
+/* Input de chat */
+.inputArea {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 100px;
+  padding: 6px 8px 6px 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.inputArea:focus-within {
+  border-color: #c8102e;
+  box-shadow: 0 2px 16px rgba(200, 16, 46, 0.12);
+}
+
+.chatInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: #222;
+  background: transparent;
+}
+
+.chatInput::placeholder {
+  color: #aaa;
+}
+
+.sendBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #c8102e;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  flex-shrink: 0;
+}
+
+.sendBtn:hover:not(:disabled) {
+  background: #a50d24;
+  transform: scale(1.05);
+}
+
+.sendBtn:disabled {
+  background: #ddd;
+  cursor: default;
+}
+
+.sendBtn .material-symbols-outlined {
+  font-size: 18px;
+}
+
+/* ─── Responsivo ─────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .chips {
+    flex-direction: column;
+    align-items: center;
+  }
+}
